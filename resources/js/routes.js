@@ -11,18 +11,18 @@ export const routes = [
         component: Home
     },
     {
-        name:'MostrarMoneda',
+        name:'mostrarMoneda',
         path:'/monedas',
         component: Mostrar
     },
     {
-        name:'CrearMoneda',
+        name:'crearMoneda',
         path:'/moneda/create',
         component: Crear
     },
     {
-        name:'EditarMoneda',
-        path:'/moneda/{id}/edit',
+        name:'editarMoneda',
+        path:'/moneda/:id/edit',
         component:Editar
     }
 ]

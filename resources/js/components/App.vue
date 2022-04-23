@@ -1,9 +1,9 @@
 <template>
     <main>
         <div style="margin-bottom:10px">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="/images/pepeHappy2.jpg" width="75" height="75"></a>
+                    <a class="navbar-brand" href="#"><img src="/images/pepoHappy3.png" width="75" height="75"></a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
