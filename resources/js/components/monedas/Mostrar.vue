@@ -27,7 +27,7 @@
                                 <td>{{moneda.simbolo}}</td>
                                 <td>
                                 <router-link :to="{name:'editarMoneda', params:{id: moneda.id}}" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></router-link>
-                                <a type="button" class="btn btn-danger"><i class="fa-solid fa-ban"></i></a>
+                                <a type="button" @click="eliminarMoneda(moneda.id)" class="btn btn-danger"><i class="fa-solid fa-ban"></i></a>
                                 </td>
                             </tr>
                         </tbody>
@@ -59,6 +59,17 @@ export default {
                     this.blog = []
                     console.log("Hubo un error" + error)
                 })
+        },
+        eliminarMoneda(id){
+            if(confirm("Desea eliminar la moneda?")){
+                this.axios.delete(`/api/monedas/${id}`)
+                    .then(response=>{
+                        this.mostrarMonedas()
+                    })
+                    .catch(error=>{
+                        console.log(error)
+                    })
+            }
         }
     }
 }
