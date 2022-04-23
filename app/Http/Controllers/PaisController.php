@@ -36,9 +36,10 @@ class PaisController extends Controller
      * @param  \App\Models\Pais  $pais
      * @return \Illuminate\Http\Response
      */
-    public function show(Pais $pais)
+    public function show($id)
     {
         //
+        $pais = Pais::find($id);
         return $pais;
     }
 
@@ -49,9 +50,10 @@ class PaisController extends Controller
      * @param  \App\Models\Pais  $pais
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Pais $pais)
+    public function update(Request $request,  $id)
     {
         //
+        $pais =  Pais::find($id);
         $pais->update($request->all());
     }
 
@@ -61,9 +63,9 @@ class PaisController extends Controller
      * @param  \App\Models\Pais  $pais
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Pais $pais)
+    public function destroy($id)
     {
         //
-        $pais->delete();
+        Pais::destroy($id);
     }
 }
